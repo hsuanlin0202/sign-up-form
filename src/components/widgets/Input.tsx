@@ -1,5 +1,6 @@
 import React from "react";
 import { UseFormRegisterReturn, FieldError } from "react-hook-form";
+import { ReactComponent as Error } from "../../../images/icon-error.svg";
 import clsx from "clsx";
 
 type Props = {
@@ -47,10 +48,9 @@ export const Input = ({
       )}
 
       {error && (
-        <img
-          className="w-6 h-6 absolute top-0 right-0 mt-4 mr-6"
-          src="/images/icon-error.svg"
-        />
+        <div className="w-6 h-6 absolute top-0 right-0 mt-4 mr-6">
+          <Error />
+        </div>
       )}
     </div>
   );
